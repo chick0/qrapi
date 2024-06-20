@@ -1,0 +1,262 @@
+#########################
+##### EditorConfig  #####
+#########################
+root = true
+
+
+[*.{cs,json}]
+charset = utf-8
+indent_style = space
+indent_size = 4
+end_of_line = lf
+
+
+[*.{cs,vb}]
+# 가능한 경우 this 한정자 지양
+dotnet_style_qualification_for_event = false
+dotnet_style_qualification_for_field = false
+dotnet_style_qualification_for_method = false
+dotnet_style_qualification_for_property = false
+
+# 가능한 경우 개체 이니셜라이저 사용 
+dotnet_style_object_initializer = true
+
+# 컬렉션 이니셜라이저 사용
+dotnet_style_collection_initializer = true
+dotnet_style_prefer_collection_expression = true
+
+# null 병합 식 선호
+dotnet_style_coalesce_expression = true
+
+# 가능한 경우 null 조건부 연산자 사용 선호
+dotnet_style_null_propagation = true
+
+# 프로퍼티 자동 구현 선호
+dotnet_style_prefer_auto_properties = true
+
+# 명시적 튜플 이름 사용 지양
+dotnet_style_explicit_tuple_names = false
+
+# 유추된 튜플 요소 이름 선호
+dotnet_style_prefer_inferred_tuple_names = true
+
+# 명시적 익명 혁식 멤버 이름 선호
+dotnet_style_prefer_inferred_anonymous_type_member_names = false
+
+# 접근 한정자 항상 요구
+dotnet_style_require_accessibility_modifiers = always
+
+# 레퍼런스 이퀄리티 체크에 is 키워드 사용 지양
+dotnet_style_prefer_is_null_check_over_reference_equality_method = false
+
+# 가능한 경우 readonly 필드 사용
+dotnet_style_readonly_field = true
+
+# 변수 할당 및 return 문에 삼항 조건 연산자 선호
+dotnet_style_prefer_conditional_expression_over_assignment = true
+dotnet_style_prefer_conditional_expression_over_return = true
+
+# 코드 명확성을 위해 소괄호 사용 지향 (연산자를 사용하지 않는 경우 제외)
+dotnet_style_parentheses_in_arithmetic_binary_operators = always_for_clarity
+dotnet_style_parentheses_in_relational_binary_operators = always_for_clarity
+dotnet_style_parentheses_in_other_binary_operators = always_for_clarity
+dotnet_style_parentheses_in_other_operators = never_if_unnecessary
+
+# 내장 타입 키워드 사용
+dotnet_style_predefined_type_for_locals_parameters_members = true
+dotnet_style_predefined_type_for_member_access = true
+
+# 복합 할당(+=, -=, *= 등) 연산자 선호
+dotnet_style_prefer_compound_assignment = true
+
+# 간결한 문자열 보간 및 조건식 선호
+dotnet_style_prefer_simplified_interpolation = true
+dotnet_style_prefer_simplified_boolean_expressions = true
+
+# 네임스페이스와 폴더명 일치 선호
+dotnet_style_namespace_match_folder = true
+
+# 여러 줄로 래핑된 연산식에서 연산자 배치 위치 (연산자를 줄 시작에 배치)
+dotnet_style_operator_placement_when_wrapping = beginning_of_line
+
+# using 지시문에 System 네임스페이스를 먼저 배치
+dotnet_sort_system_directives_first = true
+
+# using 지시문에 서로 다른 네임스페이스를 띄우지 않음
+dotnet_separate_import_directive_groups = false
+
+
+[*.cs]
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# 빌트인 타입에 대해서 명시적 타입 사용, 그 외 var 사용
+csharp_style_var_for_built_in_types = false
+csharp_style_var_when_type_is_apparent = true
+csharp_style_var_elsewhere = true
+
+# 중괄호 선호
+csharp_prefer_braces = true
+
+# 가능한 경우 인라인 변수 선언 사용
+csharp_style_inlined_variable_declaration = true
+
+# 함축적 throw 식 사용 지양
+csharp_style_throw_expression = false
+
+# null 체크 시 패턴 매칭 지양
+csharp_style_pattern_matching_over_as_with_null_check = false
+
+# is 연산자를 통한 패턴 매칭 캐스팅 선호
+csharp_style_pattern_matching_over_is_with_cast_check = true
+
+# arrow expression body 대신 중괄호로 감싸진 본문 선호
+csharp_style_expression_bodied_constructors = false
+csharp_style_expression_bodied_methods = false
+csharp_style_expression_bodied_properties = false
+csharp_style_expression_bodied_indexers = false
+csharp_style_expression_bodied_accessors = false
+csharp_style_expression_bodied_operators = false
+csharp_style_expression_bodied_local_functions = false
+csharp_style_expression_bodied_lambdas = false
+
+# 간략한 default 문 선호
+csharp_prefer_simple_default_expression = true
+
+# 한정자 순서 (기본값과 동일)
+csharp_preferred_modifier_order = public,private,protected,internal,static,extern,new,virtual,abstract,sealed,override,readonly,unsafe,volatile,async
+
+# 익명 함수 대신 로컬 함수 선호
+csharp_style_pattern_local_over_anonymous_function = true
+csharp_style_prefer_local_over_anonymous_function = true
+
+# 분해된 변수 선언 지양
+csharp_style_deconstructed_variable_declaration = false
+
+# 컬렉션 끝 인덱스 계산 연산자(^) 사용 지양
+csharp_style_prefer_index_operator = false
+
+# 컬렉션 슬라이싱 연산자(...) 사용 지양
+csharp_style_prefer_range_operator = false
+
+# 미사용 식 언더바(discard variable) 할당 선호
+csharp_style_unused_value_assignment_preference = discard_variable
+csharp_style_unused_value_expression_statement_preference = discard_variable
+
+# 로컬 함수에 static 한정자 사용 지양
+csharp_prefer_static_local_function = true
+
+# 간단한 using 문 선호
+csharp_prefer_simple_using_statement = true
+
+# 최상위 using 문을 네임스페이스 외부에 배치
+csharp_using_directive_placement = outside_namespace
+
+# switch 식 사용 선호
+csharp_style_prefer_switch_expression = true
+
+# new로 객체 생성 시 타입 생략 선호
+csharp_style_implicit_object_creation_when_type_is_apparent = true
+
+# 타입 체크 대신 null 체크 선호
+csharp_style_prefer_null_check_over_type_check = true
+
+# 블럭 스코프 네임스페이스 선언 선호
+csharp_style_namespace_declarations = block_scoped
+
+# 튜플 스타일의 컬렉션 아이템 교환 선호
+csharp_style_prefer_tuple_swap = true
+
+# 메서드 그룹 대신 람다 식 선호
+csharp_style_prefer_method_group_conversion = false
+
+# 최상위 문 지양
+csharp_style_prefer_top_level_statements = false
+
+# 바이트 배열에 UTF-8 문자열 리터럴 할당 선호
+csharp_style_prefer_utf8_string_literals = true
+
+# readonly struct 선호
+csharp_style_prefer_readonly_struct = true
+
+# 클래스 기본 생성자 지양
+csharp_style_prefer_primary_constructors = false
+
+# delegate 호출 시 조건부 병합 연산자(?.) 사용 선호
+csharp_style_conditional_delegate_call = true
+
+##### 포매팅 스타일 #####
+### 줄바꿈 옵션 ###
+# BSD(Allman) 스타일
+csharp_new_line_before_open_brace = all
+csharp_new_line_before_else = true
+csharp_new_line_before_catch = true
+csharp_new_line_before_finally = true
+csharp_new_line_before_members_in_object_initializers = true
+csharp_new_line_before_members_in_anonymous_types = true
+csharp_new_line_between_query_expression_clauses = true
+
+# 한 줄에 하나씩
+csharp_preserve_single_line_statements = false
+
+# 프로퍼티 선언 시 get/set 접근자를 한 줄에 배치
+csharp_preserve_single_line_blocks = true
+
+### 들여쓰기 옵션 ###
+# switch 문 / case 문 내부에 들여쓰기 추가
+csharp_indent_switch_labels = true
+csharp_indent_case_contents = true
+
+# case 문 내부가 중괄호 블럭인 경우 들여쓰기 추가
+csharp_indent_case_contents_when_block = true
+
+# 중괄호 블럭 내부에 들여쓰기 추가
+csharp_indent_block_contents = true
+
+# 중괄호 자체는 들여쓰기 없음
+csharp_indent_braces = false
+
+### 간격 옵션 ###
+# 캐스트와 값 사이에 공백 제거
+csharp_space_after_cast = false
+
+# 키워드 뒤에 공백 제거
+csharp_space_after_keywords_in_control_flow_statements = false
+
+# 소괄호 내부에 공백 제거
+csharp_space_between_parentheses = false
+csharp_space_between_method_declaration_parameter_list_parentheses = false
+csharp_space_between_method_declaration_empty_parameter_list_parentheses = false
+csharp_space_between_method_call_parameter_list_parentheses = false
+csharp_space_between_method_call_empty_parameter_list_parentheses = false
+
+# 상속 지시자 앞뒤에 공백 삽입
+csharp_space_before_colon_in_inheritance_clause = true
+csharp_space_after_colon_in_inheritance_clause = true
+
+# 연산자 앞뒤에 공백 삽입
+csharp_space_around_binary_operators = before_and_after
+
+# 메서드명과 소괄호 사이 공백 제거
+csharp_space_between_method_declaration_name_and_open_parenthesis = false
+csharp_space_between_method_call_name_and_opening_parenthesis = false
+
+# 콤마(,) 뒤에 공백 삽입, 앞에 공백 제거
+csharp_space_after_comma = true
+csharp_space_before_comma = false
+
+# 온점(.) 앞뒤 공백 제거
+csharp_space_after_dot = false
+csharp_space_before_dot = false
+
+# for 문 내 각 세미콜론 뒤에 공백 삽입, 앞에 공백 제거
+csharp_space_after_semicolon_in_for_statement = true
+csharp_space_before_semicolon_in_for_statement = false
+
+# 선언문 내 추가 공백 제거
+csharp_space_around_declaration_statements = false
+
+# 대괄호 앞/내부 공백 제거
+csharp_space_between_square_brackets = false
+csharp_space_before_open_square_brackets = false
+csharp_space_between_empty_square_brackets = false
